@@ -49,7 +49,7 @@ const allPossibleParents = (function (bagToInspect) // find all possible (in)dir
     return allPossibleParents;
 })(targetBag);
 
-console.log(`[part 1] total number of bags which can (in)directly contain a "${targetBag.color}" bag: ${allPossibleParents.length}`);
+console.log(`[part 1] total number of bags which can (in)directly contain a "${targetBag.color}" bag:`, allPossibleParents.length);
 
 
 /*** part 2 ***/
@@ -70,4 +70,4 @@ const totalChildBags = (function recursiveCountChildren(bag) // find all possibl
     );
 })(targetBag);
 
-console.log(`[part 2] total number of bags required in a "${targetBag.color}" bag: ${totalChildBags}`);
+console.log(`[part 2] total number of bags required in a "${targetBag.color}" bag:`, totalChildBags);

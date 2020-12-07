@@ -14,6 +14,8 @@ const parsedPasses = passes.map(pass => {
     };
 }).sort((a, b) => a.id - b.id);
 
+console.log('[part 1] highest boarding pass ID:', parsedPasses[parsedPasses.length - 1].id);
+
 const passBeforeMissingPass = parsedPasses.find((pass, index, list) => list[index + 1].id === pass.id + 2);
 const myPassMustBe = {
     row: passBeforeMissingPass.row + (passBeforeMissingPass.column == 7 ? 1 : 0),
@@ -21,6 +23,4 @@ const myPassMustBe = {
     id: passBeforeMissingPass.id + 1
 };
 
-console.debug(myPassMustBe);
-
-console.log('following boarding pass not found and probably yours:', myPassMustBe);
+console.log('[part 2] following boarding pass not found and probably yours:', myPassMustBe);

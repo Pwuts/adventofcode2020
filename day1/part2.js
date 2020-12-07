@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-fs.readFile('input.txt', (error, data) => {
+fs.readFile(`${__dirname}/input.txt`, (error, data) => {
     if (error) console.error(error);
 
     const numbers = data.toString().split('\n').map(Number);
